@@ -9,33 +9,33 @@ body {
 }
 
 @keyframes Animation {
-	0% {
-		transform: scale3d(1, 1, 1);
-	}
+    0% {
+        transform: scale3d(1, 1, 1);
+    }
 
-	30% {
-		transform: scale3d(1.25, 0.75, 1);
-	}
+    30% {
+        transform: scale3d(1.25, 0.75, 1);
+    }
 
-	40% {
-		transform: scale3d(0.75, 1.25, 1);
-	}
+    40% {
+        transform: scale3d(0.75, 1.25, 1);
+    }
 
-	50% {
-		transform: scale3d(1.15, 0.85, 1);
-	}
+    50% {
+        transform: scale3d(1.15, 0.85, 1);
+    }
 
-	65% {
-		transform: scale3d(0.95, 1.05, 1);
-	}
+    65% {
+        transform: scale3d(0.95, 1.05, 1);
+    }
 
-	75% {
-		transform: scale3d(1.05, 0.95, 1);
-	}
+    75% {
+        transform: scale3d(1.05, 0.95, 1);
+    }
 
-	100% {
-		transform: scale3d(1, 1, 1);
-	}
+    100% {
+        transform: scale3d(1, 1, 1);
+    }
 }
 
 .titulo {
@@ -44,14 +44,22 @@ body {
     text-decoration: overline wavy;
 }
 
-.imagen{
+.imagen {
     width: 170px;
     height: 180px;
     border-radius: 20px;
 }
+
 .imagen:hover {
     transition: 1s;
     box-shadow: 18px 14px 12px -1px rgba(135, 135, 135, 0.79);
     -webkit-box-shadow: 18px 14px 12px -1px rgba(135, 135, 135, 0.79);
     -moz-box-shadow: 18px 14px 12px -1px rgba(135, 135, 135, 0.79);
+}
+
+/* CSS de ventana de API */
+.contenedor {
+    background-color: rgb(162, 106, 236);
+    border-radius: 20px;
+    color: white;
 }

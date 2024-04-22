@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba de api</title>
+    <link rel="shortcut icon" href="img/SmashBall.svg.ico" />
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="contenedor text-center">
+        <h1 class="text-center mt-5 ">Generador de gatos al azar</h1>
+        <h2 class="text-center">API GRATUITA</h2>
+        <button type="button" class="btn btn-info mb-3 btn-lg"><a href="index.html" style="color: white;">Regresar</a> </button>
+    </div>
+
+    <h3 class="text-center">Gato Aleatorio</h1>
+
+        <div class="d-flex flex-column">
+            <button type="button" class="btn btn-success mb-3" style="width: 300px;" onclick="PruebaApi()">Obtener Gato
+                Aleatorio</button>
+
+            <div id="imagenCont" class="mb-auto align-items-center"></div>
+        </div>
+
+
+
+
+
+        <script>
+            const url = "https://api.thecatapi.com/v1/images/search?size=med&mime_types=jpg&format=json&has_breeds=true&order=RANDOM&page=0&limit=1";
+
+            const PruebaApi = async () => {
+                const respuesta = await fetch(url);
+                const resultado = await respuesta.json();
+
+                // Obtener una referencia al div
+                let imagenCont = document.getElementById("imagenCont");
+
+                // Crear un nuevo elemento para la imagen 
+                let Imagen = document.createElement("img");
+
+                imagenCont.innerHTML = '';
+
+                Imagen.src = resultado[0].url;
+
+                // Agregar la imagen al contenedor en el HTML
+                imagenCont.appendChild(Imagen);
+
+                console.log(resultado);
+
+            }
+
+            PruebaApi();
+        </script>
+</body>
+
+</html>
